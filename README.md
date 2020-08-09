@@ -38,7 +38,7 @@ To display the map we will be required to explicity specify the height and th wi
     }
 ```
 
-The elemnt selector `body` above removes any margin of the body. The second selector `#map` selector specifies the map height using relative unit `height:100vh;`  will cover the device height while the ` width:100%;` will cover the entire device width. If you want a smaller map you can play around with the values. Other units you can use for the width and height is the pixels i.e `height:300px;`
+The elemnt selector `body` above removes any margin of the body. The second selector `#map` selector specifies the map height using relative unit `height:100vh;`  will cover the entire device height while the `width:100%;` will cover the entire device width. If you want a smaller map you can play around with the values. Other units you can use for the width and height is the pixels i.e `height:300px;`
 
 
 #### Including Leaflet styles and the JavaScript API.
