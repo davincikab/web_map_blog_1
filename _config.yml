@@ -1,1 +1,10 @@
 theme: jekyll-theme-hacker
+title: Introduction to Web Mapping With Leaflet
+description: Working with Interactive webmaps on the web.
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
