@@ -101,10 +101,43 @@ Within the script tag lets initialize the map object;
 ```javascript
     var map = L.map('map',{
         center:[0.9877, 38.767],
-        zoom:10
+        zoom:5
     });
 ```
 
 The above code snippets create a map object `map` which takes two arguments. The first is the `id` of the tag the map will be displayed in. The second is a JavaScript Object with a number of key/value pair. The object specifies the map view center which is an array `[latitude, longitude]` and the map zoom level an integer value.
 
 Open the html file in your browser and this is what you get.
+
+![Empty Map](output/map.PNG)
+
+#### Working with Map Tiles (Basemap)
+
+Basemaps provide the user with context of map. It has overlayed information on a variety of features i.e roads, land cover, cities, place names etc. 
+
+We are going to use [CARTO](https://carto.com/) basemaps in these tutorial. A complete list of basemaps they provide is [here](https://github.com/CartoDB/basemap-styles).
+
+``` javascript
+    // ....
+    var cartoLight = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}' + (L.Browser.retina ? '@2x.png' : '.png'), {
+        attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+        minZoom: 0
+    }); 
+
+    // add the tilelayer to the map
+    cartoLight.addTo(map);
+
+```
+
+The above code snippet creates tilelayer. `L.tileLayer()` takes a tile url as the required argument and object with optional key/value pair such as attribution, extent, zoom limits etc. The tilelayer will be displayed between zoom level 0 to level 20. Play around with the values.
+The attribution is important to acknowledge other peoples effort in creating the tileLayer. The subdomains are used to refer to the tiles servers. 
+
+More options can be found [here](https://leafletjs.com/reference-1.6.0.html#tilelayer). The last line adds the tilelayer to the map.
+
+
+The result should be as in the image below.
+
+![Empty Map](output/carto.PNG)
+
