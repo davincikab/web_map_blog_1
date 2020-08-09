@@ -1,6 +1,6 @@
 ## Introduction to Web Mapping with Leaflet
 
-[Web mapping]('https://en.wikipedia.org/wiki/Web_mapping') is the process of using the maps delivered by geographic information systems (GIS) in World Wide Web. A web map on the World Wide Web is both served and consumed, thus web mapping is more than just web cartography, it is a service by which consumers may choose what the map will show.
+[Web mapping](https://en.wikipedia.org/wiki/Web_mapping) is the process of using the maps delivered by geographic information systems (GIS) in World Wide Web. A web map on the World Wide Web is both served and consumed, thus web mapping is more than just web cartography, it is a service by which consumers may choose what the map will show.
 
 ### HTML Code segment
 Web map will be rendered within a div container with a unique id in this case `<div id="map"></div>`.
