@@ -3,9 +3,9 @@
 Leaflet Markers are used to identify location on a digital map (static or interactive). Markers used are images (png), SVGs or custom HTML element. Leaflet provides the the basic image marker icon in .png file format. The marker consist of two images the icon and it's shadow. Other marker icon options include:
 
  
- * Circle Marker
- * Div Icons
- * Custom Image Icons
+1. Circle Marker
+2. Div Icons
+3. Custom Image Icons
 
 
 #### Displaying default Marker
