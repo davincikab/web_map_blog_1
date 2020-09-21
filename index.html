@@ -21,6 +21,13 @@
             height:100vh;
             width:100%;
         }
+
+        .custom-icon {
+            background-color: #c418db;
+            padding: 10px;
+            border-radius: 40%;
+            box-shadow: 2px 2px 0.9em #343434;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +77,18 @@
         var rioMarker = L.marker([-22.94351,-43.4049161], {
             icon:imageIcon
         }).bindPopup("i am rio").addTo(map);
+
+
+        // Custom Div Icon marker
+        var myDivIcon = L.divIcon({
+            className:"custom-icon"
+        });
+
+        var osloMarker = L.marker([59.9134424,10.7512913],{
+            icon:myDivIcon
+        })
+        .bindPopup("I am Oslo")
+        .addTo(map);
     </script>
 </body>
 </html>

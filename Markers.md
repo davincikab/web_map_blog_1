@@ -88,5 +88,32 @@ Information displayed on a map varies a lot from restuarants, schools, recreatio
 ![Custom Image Icon](output/markers/custom_image_marker.PNG)
 
 
+#### Div Icon Markers
 
+As the name suggests the icon is created from HTML div element styled with CSS. The `L.divIcon()` allows to create custom markers. Creating the marker is as simple as shown below.
+```css
+    /* ... */
+    .custom-icon {
+        background-color: #c418db;
+        padding: 10px;
+        border-radius: 40%;
+        box-shadow: 2px 2px 0.9em #343434;
+    }
+```
+```javascript
+    // ...
+    var myDivIcon = L.divIcon({
+        className:"custom-icon"
+    });
+
+    var osloMarker = L.marker([59.9134424,10.7512913],{
+        icon:myDivIcon
+    })
+    .bindPopup("I am Oslo")
+    .addTo(map);
+```
+
+The CSS code is used to style the div element with class `.custom-icon` below. `L.divIcon()` takes a JavaScript Object with options such as `className:` used for CSS styling, `html:` to provide the any markup necessary and `bgPos:` specifying the position of the background. The output looks like follows.
+
+![Div Icon Marker](output/markers/div_icon_marker.png)
 
