@@ -13,17 +13,18 @@ Leaflet Markers are used to identify location on a digital map (static or intera
 Using the previous blog code we add the following
 
 ```javascript
-
+    // ...
     var nairobi = L.marker([-1.284945, 36.822625]).addTo(map);
 ```
 
 ![Empty Map](output/markers/default_marker.PNG)
 
-The above code will add a marker located at Nairobi CBD. The above code creates a marker instance, which takes a required argument which can be an array of `[latitude, longitude]` or an instance of `L.LatLng` class such as `L.latLng(-1.284945, 36.822625);`. Always remember the order latitude then longitude.
+The above code will add a marker located at Nairobi CBD. It is a marker instance, which takes a required argument which can be: an array of `[latitude, longitude]` or an instance of `L.LatLng` class such as `L.latLng(-1.284945, 36.822625);`. Always remember the order latitude then longitude.
 
-We can provide descriptive information to the marker using popup. This will be covered in the next tutorial, however, it is as easy as: replace the above line with the following
+We can provide descriptive information to the marker using popup. This will be covered in the another tutorial, however, it is as easy as: replace the above line with the following
 
 ```javascript
+    // ...
     var nairobi = L.marker([-1.284945, 36.822625]).bindPopup("I am Nairobi").addTo(map);
 ```
 ![Empty Map](output/markers/popup.PNG)
@@ -43,7 +44,7 @@ Circle markers creates marker either as SVGs or a Canvas element depending on th
 
 ![Empty Map](output/markers/circle_marker.PNG)
 
-The above code segment create a circle marker with default styling. Like the `L.marker` class the coordinates in the format described previously are required. Default is not always great and does not meet our needs. `L.circleMarker` inherits some properties to create custom styles on the svg. The styles are described using JavasScript object.
+The above code segment create a circle marker with default styling. Like the `L.marker()` class, the coordinate is required and as described previously. Default is not always great and does not meet our needs, hence, circleMarker can add to the look and feel of the map . `L.circleMarker()` has properties to create custom styles on the svg. The styles are described using JavasScript object.
 Replace the above code with the following.
 
 ```javascript
@@ -61,9 +62,9 @@ Replace the above code with the following.
     ).bindPopup("I am Tokyo").addTo(map);
 ```
 
-The above code segment adds specifies the circle radius, circle fill color opacity, fill color (it takes hex codes, color names, rgb), circle outline color and the outline with of 0. The object is added to the as an argument to `L.circleMarker` instance. There are other options on this circleMarker [here](https://leafletjs.com/reference-1.7.1.html#circlemarker-option). Feel free to play around with them.
+The code segment does: specify the circle radius, circle fill color, opacity, fill color (which can be:hex codes, color names, rgb), circle outline color and the outline with of 0. The object is added to the as an argument to `L.circleMarker` instance. There are other options on this circleMarker [here](https://leafletjs.com/reference-1.7.1.html#circlemarker-option). Feel free to play around with these options.
 
-![Styled Popup](output/markers/styled_circle_marker.PNG)
+![Custon Circle Marker](output/markers/styled_circle_marker.PNG)
 
 ### 3. Working with custom image as icons.
 
@@ -83,14 +84,14 @@ Information displayed on a map varies a lot from restuarants, schools, recreatio
     }).bindPopup("i am rio").addTo(map);
 ```
 
-`L.Icon()` class takes a JavaScript object as an argument. The object has configuration information on the iconUrl (image url), the incon size (width and height) in pixels, the iconAnchor point and popupAnchor. You can provide other more options such as the iconShadow if you have one. More options are [here]("https://leafletjs.com/reference-1.7.1.html#icon"). The result looks as follows;
+`L.Icon()` class takes a JavaScript object as an argument. The object has configuration information on the iconUrl (image url), the icon size (width and height) in pixels, the iconAnchor point and popupAnchor. You can provide other more options such as the iconShadow, if you have one. More options are [here]("https://leafletjs.com/reference-1.7.1.html#icon"). The result looks like:
 
 ![Custom Image Icon](output/markers/custom_image_marker.PNG)
 
 
 ### Div Icon Markers
 
-As the name suggests the icon is created from HTML div element styled with CSS. The `L.divIcon()` allows to create custom markers. Creating the marker is as simple as shown below.
+As the name suggests the icon is created from HTML div element styled with CSS. The `L.divIcon()` allows us to use CSS styles for custom markers. Creating the marker is as simple as shown below.
 ```css
     /* ... */
     .custom-icon {
@@ -113,7 +114,7 @@ As the name suggests the icon is created from HTML div element styled with CSS. 
     .addTo(map);
 ```
 
-The CSS code is used to style the div element with class `.custom-icon` below. `L.divIcon()` takes a JavaScript Object with options such as `className:` used for CSS styling, `html:` to provide the any markup necessary and `bgPos:` specifying the position of the background. The output looks like follows.
+The CSS code is used to style the div element with class `.custom-icon`. `L.divIcon()` takes a JavaScript Object with options such as `className:` used for CSS styling, `html:` to provide the any markup necessary and `bgPos:` specifying the position of the background. The output is a shown below.
 
 ![Div Icon Marker](output/markers/div_icon_marker.PNG)
 
