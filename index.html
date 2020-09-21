@@ -46,7 +46,17 @@
         var nairobi = L.marker([-1.284945, 36.822625]).bindPopup("I am Nairobi").addTo(map);
 
         // circle Marker
-        var tokyo = L.circleMarker([35.6769865,139.7603121]).bindPopup("I am Tokyo").addTo(map);
+        var tokyoStyle = {
+            radius:30,
+            fillOpacity:1,
+            fillColor:"#ea9500",
+            color:"#ea9500",
+            weight:0
+        };
+
+        var tokyo = L.circleMarker([35.6769865,139.7603121], 
+            tokyoStyle
+        ).bindPopup("I am Tokyo").addTo(map);
     </script>
 </body>
 </html>

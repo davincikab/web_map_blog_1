@@ -37,9 +37,30 @@ Clicking the marker the popup will be displayed.
 Circle markers creates marker either as SVGs or a Canvas element depending on the renderer selected.
 
 ```javascript
+     // ....
     var tokyo = L.circleMarker([35.6769865,139.7603121]).bindPopup("I am Tokyo").addTo(map);
 ```
 
 ![Empty Map](output/markers/circle_marker.PNG)
+
+The above code segment create a circle marker with default styling. Like the `L.marker` class the coordinates in the format described previously are required. Default is not always great and does not meet our needs. `L.circleMarker` inherits some properties to create custom styles on the svg. The styles are described using JavasScript object.
+Replace the above code with the following.
+
+```javascript
+     // ....
+   var tokyoStyle = {
+        radius:30,
+        fillOpacity:1,
+        fillColor:"#ea9500",
+        color:"#ea9500",
+        weight:0
+    };
+
+    var tokyo = L.circleMarker([35.6769865,139.7603121], 
+        tokyoStyle
+    ).bindPopup("I am Tokyo").addTo(map);
+```
+
+
 
 
