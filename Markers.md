@@ -8,7 +8,7 @@ Leaflet Markers are used to identify location on a digital map (static or intera
 3. Custom Image Icons
 
 
-#### Displaying default Marker
+### 1. Displaying default Marker
 
 Using the previous blog code we add the following
 
@@ -32,7 +32,7 @@ Clicking the marker the popup will be displayed.
 
 
 
-### Cricle Markers
+### 2. Cricle Markers
 
 Circle markers creates marker either as SVGs or a Canvas element depending on the renderer selected.
 
@@ -65,7 +65,7 @@ The above code segment adds specifies the circle radius, circle fill color opaci
 
 ![Styled Popup](output/markers/styled_circle_marker.PNG)
 
-### Working with custom image as icons.
+### 3. Working with custom image as icons.
 
 Information displayed on a map varies a lot from restuarants, schools, recreational facilities, churches etc. All these cannot be represented using a the default marker, that's where custom image icons shines. To create a custom icon for your marker you provide the `L.marker()` instance with the icon optional argument. It is an instance of `L.icon()`.
 
