@@ -1,12 +1,10 @@
-## Introduction to Web Mapping with Leaflet
-
-### Working with Markers
+## Working with Markers
 
 Leaflet Markers are used to identify location on a digital map (static or interactive). Markers used are images (png), SVGs or custom HTML element. Leaflet provides the the basic image marker icon in .png file format. The marker consist of two images the icon and it's shadow. Other marker icon options include:
  
- - Circle Marker
- - Div Icons
- - Custom Image Icons
+ * Circle Marker
+ * Div Icons
+ * Custom Image Icons
 
 #### Displaying default Marker
 
@@ -65,7 +63,7 @@ The above code segment adds specifies the circle radius, circle fill color opaci
 
 ![Styled Popup](output/markers/styled_circle_marker.PNG)
 
-#### Working with custom image as icons.
+### Working with custom image as icons.
 
 Information displayed on a map varies a lot from restuarants, schools, recreational facilities, churches etc. All these cannot be represented using a the default marker, that's where custom image icons shines. To create a custom icon for your marker you provide the `L.marker()` instance with the icon optional argument. It is an instance of `L.icon()`.
 
@@ -88,7 +86,7 @@ Information displayed on a map varies a lot from restuarants, schools, recreatio
 ![Custom Image Icon](output/markers/custom_image_marker.PNG)
 
 
-#### Div Icon Markers
+### Div Icon Markers
 
 As the name suggests the icon is created from HTML div element styled with CSS. The `L.divIcon()` allows to create custom markers. Creating the marker is as simple as shown below.
 ```css
@@ -115,5 +113,7 @@ As the name suggests the icon is created from HTML div element styled with CSS. 
 
 The CSS code is used to style the div element with class `.custom-icon` below. `L.divIcon()` takes a JavaScript Object with options such as `className:` used for CSS styling, `html:` to provide the any markup necessary and `bgPos:` specifying the position of the background. The output looks like follows.
 
-![Div Icon Marker](output/markers/div_icon_marker.png)
+![Div Icon Marker](output/markers/div_icon_marker.PNG)
+
+In the next tutorial we will Look into `L.geoJson()` class. 
 
