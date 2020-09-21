@@ -61,6 +61,32 @@ Replace the above code with the following.
     ).bindPopup("I am Tokyo").addTo(map);
 ```
 
+The above code segment adds specifies the circle radius, circle fill color opacity, fill color (it takes hex codes, color names, rgb), circle outline color and the outline with of 0. The object is added to the as an argument to `L.circleMarker` instance. There are other options on this circleMarker [here](https://leafletjs.com/reference-1.7.1.html#circlemarker-option). Feel free to play around with them.
+
+![Styled Popup](output/markers/styled_circle_marker.PNG)
+
+#### Working with custom image as icons.
+
+Information displayed on a map varies a lot from restuarants, schools, recreational facilities, churches etc. All these cannot be represented using a the default marker, that's where custom image icons shines. To create a custom icon for your marker you provide the `L.marker()` instance with the icon optional argument. It is an instance of `L.icon()`.
+
+```javascript
+    // ...
+    var imageIcon = L.icon({
+        iconUrl:'images/user.png',
+        iconSize:[30, 30],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -85],
+    });
+
+    var rioMarker = L.marker([-22.94351,-43.4049161], {
+        icon:imageIcon
+    }).bindPopup("i am rio").addTo(map);
+```
+
+`L.Icon()` class takes a JavaScript object as an argument. The object has configuration information on the iconUrl (image url), the incon size (width and height) in pixels, the iconAnchor point and popupAnchor. You can provide other more options such as the iconShadow if you have one. More options are [here]("https://leafletjs.com/reference-1.7.1.html#icon"). The result looks as follows;
+
+![Custom Image Icon](output/markers/custom_image_marker.PNG)
+
 
 
 

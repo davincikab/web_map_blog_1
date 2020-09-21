@@ -27,8 +27,8 @@
     <div id="map"></div>
     <script>
         var map = L.map('map',{
-            center:[0.9877, 38.767],
-            zoom:5
+            center:[14.00869637063467, 18.193359375000004],
+            zoom:3
         });
 
            // ....
@@ -57,6 +57,19 @@
         var tokyo = L.circleMarker([35.6769865,139.7603121], 
             tokyoStyle
         ).bindPopup("I am Tokyo").addTo(map);
+
+
+        // Custom Image Icon
+        var imageIcon = L.icon({
+            iconUrl:'images/user.png',
+            iconSize:[35, 35],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -85],
+        });
+
+        var rioMarker = L.marker([-22.94351,-43.4049161], {
+            icon:imageIcon
+        }).bindPopup("i am rio").addTo(map);
     </script>
 </body>
 </html>
